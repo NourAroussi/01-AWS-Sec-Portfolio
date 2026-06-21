@@ -27,3 +27,4 @@ Thumbs.db
 
 # Lambda zip artifacts
 *.zip
+01-cloud-resume-challenge/site/*
