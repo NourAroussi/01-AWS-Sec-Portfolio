@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nour Aroussi - Cloud Security & Network Engineer</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <!-- SEO & Social Sharing -->
+    <meta name="description" content="Cloud Security & Network Engineer | CISSP | GCIH | GSEC | AWS Security Specialty | Building security automation with Terraform & CDK">
+    <meta property="og:title" content="Nour Aroussi - Cloud Security & Network Engineer">
+    <meta property="og:description" content="Security-focused engineer with expertise in AWS security architecture, infrastructure automation, and enterprise networking. CISSP | GCIH | GSEC | AWS Security Specialty.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nouraroussi.github.io/aws-security-portfolio">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nour Aroussi - Cloud Security & Network Engineer">
+    <meta name="twitter:description" content="Cloud Security Engineer | CISSP | AWS Security Specialty | Terraform & CDK">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.credly.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'none'; frame-src 'none';">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            overflow-x: hidden;
+            position: relative;
+            transition: background 0.3s, color 0.3s;
+        }
+        /* Dark mode */
+        body.dark { background: #0f172a; color: #e2e8f0; }
+        body.dark .tl-card { background: rgba(30, 41, 59, 0.9); border-color: rgba(99, 102, 241, 0.3); }
+        body.dark .tl-card h3 { color: #a5b4fc; }
+        body.dark .tl-card .company { color: #94a3b8; }
+        body.dark .tl-card ul li { color: #cbd5e1; }
+        body.dark .badge-card { background: rgba(30, 41, 59, 0.8); border-color: rgba(99, 102, 241, 0.2); }
+        body.dark .badge-card span { color: #94a3b8; }
+        body.dark .tl-row .tl-mid::before { border-color: #0f172a; }
+        /* Dark mode toggle */
+        .theme-toggle {
+            position: fixed; top: 16px; right: 16px; z-index: 100;
+            background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px; padding: 8px 14px; cursor: pointer; font-size: 0.85rem; color: #4f46e5;
+            transition: all 0.3s;
+        }
+        .theme-toggle:hover { background: rgba(99, 102, 241, 0.2); }
+        body.dark .theme-toggle { color: #a5b4fc; border-color: rgba(165, 180, 252, 0.3); }
+        /* Sticky nav */
+        .sticky-nav {
+            position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px); padding: 10px 0; text-align: center;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            transition: background 0.3s;
+        }
+        body.dark .sticky-nav { background: rgba(15, 23, 42, 0.95); }
+        .sticky-nav a {
+            color: #4f46e5; text-decoration: none; font-size: 0.82rem; margin: 0 12px;
+            padding: 4px 10px; border-radius: 12px; transition: background 0.2s;
+        }
+        .sticky-nav a:hover { background: rgba(99, 102, 241, 0.1); }
+        body.dark .sticky-nav a { color: #a5b4fc; }
+        /* Scroll animation */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .floating-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+        .floating-badge {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            opacity: 0.2;
+            animation: floatAround 20s infinite linear;
+        }
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, -150px) rotate(90deg); }
+            50% { transform: translate(-50px, -300px) rotate(180deg); }
+            75% { transform: translate(150px, -100px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Timeline visual */
+        .timeline-section { margin-bottom: 60px; }
+        .timeline-section h2 { text-align: center; font-size: 1.8rem; color: #4f46e5; margin-bottom: 10px; }
+        .timeline-labels { display: grid; grid-template-columns: 1fr 3px 1fr; margin-bottom: 0; }
+        .timeline-labels span { text-align: center; font-size: 1rem; font-weight: 600; color: #6366f1; text-transform: uppercase; letter-spacing: 1px; padding: 10px 0; }
+        .timeline-labels .tl-mid { background: linear-gradient(to bottom, #6366f1, #8b5cf6); }
+        .tl-row { display: grid; grid-template-columns: 1fr 3px 1fr; }
+        .tl-row .tl-left { padding: 8px 16px 8px 0; }
+        .tl-row .tl-mid {
+            background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+            position: relative;
+        }
+        .tl-row .tl-mid::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: #6366f1;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #6366f1;
+        }
+        .tl-row .tl-date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 0;
+        }
+        .tl-row .tl-date span {
+            background: #6366f1;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+        .tl-row .tl-right { padding: 8px 0 8px 10px; }
+        .tl-row .tl-right { padding: 8px 0 8px 16px; }
+        .tl-card {
+            background: rgba(241, 245, 249, 0.9);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+        .tl-card.education { border-left: 4px solid #8b5cf6; }
+        .tl-card.experience { border-right: 4px solid #6366f1; }
+        .tl-card h3 { color: #4f46e5; font-size: 1rem; margin-bottom: 4px; }
+        .tl-card .date { color: #6366f1; font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; }
+        .tl-card .company { color: #64748b; font-size: 0.88rem; margin-bottom: 8px; }
+        .tl-card ul { list-style: none; padding: 0; }
+        .tl-card ul li { padding: 2px 0; font-size: 0.83rem; color: #334155; line-height: 1.5; }
+        .tl-card ul li::before { content: '▸ '; color: #6366f1; }
+        .tl-card details summary { cursor: pointer; font-size: 0.82rem; color: #6366f1; margin-top: 6px; }
+        .tl-card details summary:hover { text-decoration: underline; }
+        .tl-card details[open] summary { margin-bottom: 8px; }
+        @media (max-width: 768px) {
+            .tl-row, .timeline-labels { grid-template-columns: 1fr !important; }
+            .tl-row .tl-left, .tl-row .tl-right { padding: 8px 0; }
+        }
+
+        /* Badges */
+        .badges-section { margin-bottom: 60px; }
+        .badges-section h2 { text-align: center; font-size: 1.8rem; color: #4f46e5; margin-bottom: 40px; }
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .badge-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: rgba(241, 245, 249, 0.9);
+            border-radius: 12px;
+            padding: 16px 10px;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            width: 100%;
+            position: relative;
+        }
+        .badge-card:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2); }
+        .badge-card img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 8px; transition: transform 0.3s; }
+        .badge-card:hover img { transform: scale(1.1); }
+        .badge-card span { font-size: 0.7rem; color: #475569; text-align: center; }
+        .badge-card::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            z-index: 10;
+        }
+        .badge-card:hover::after { opacity: 1; }
+
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .col-center { display: none; }
+            .col-left, .col-right { padding: 0; }
+            .badges-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="document.body.classList.toggle('dark'); this.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';">🌙 Dark</button>
+    <nav class="sticky-nav">
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+    </nav>
+    <div class="floating-bg" id="floatingBg"></div>
+    <div class="container">
+        <!-- Header -->
+        <header style="text-align:center; margin-bottom:50px;">
+            <h1 style="font-size:2.4rem; color:#1e293b; margin-bottom:4px;">Nour Aroussi</h1>
+            <p style="font-size:1.1rem; color:#4f46e5; margin-bottom:8px;">Cloud Security & Network Engineer</p>
+            <p style="font-size:0.85rem; color:#475569; max-width:700px; margin:0 auto 14px; line-height:1.6;">Security-focused engineer with expertise in AWS security architecture, infrastructure automation (Terraform/CDK), and enterprise networking. Building detection & response pipelines, compliance-as-code, and secure cloud infrastructure. CISSP | GCIH | GSEC | AWS Security Specialty.</p>
+            <p style="font-size:0.9rem; color:#475569; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+                <span style="display:inline-flex; align-items:center; gap:5px;">📍 Boston, MA | Open to Remote</span>
+                <span style="display:inline-flex; align-items:center; gap:5px;">
+                    <svg width="16" height="16" fill="#4f46e5" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                    +1 (646) 764-4871
+                </span>
+                <span style="display:inline-flex; align-items:center; gap:5px;">
+                    <svg width="16" height="16" fill="#4f46e5" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a id="eml" style="color:#475569; text-decoration:none; cursor:pointer;"></a>
+                </span>
+                <a href="https://www.linkedin.com/in/nouraroussi" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:5px; color:#4f46e5; text-decoration:none;">
+                    <svg width="16" height="16" fill="#4f46e5" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/nouraroussi" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:5px; color:#4f46e5; text-decoration:none;">
+                    <svg width="16" height="16" fill="#4f46e5" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                    GitHub
+                </a>
+            </p>
+        </header>
+
+        <!-- Skills -->
+        <section id="skills" class="fade-in" style="margin-bottom:50px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
+            <!-- Security -->
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AWS Security Services</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">GuardDuty / Security Hub</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Control Tower / SCPs / IAM</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Security Operations</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Penetration Testing</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AI-Assisted Threat Detection & Log Analysis</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">HIPAA / NIST / CIS Security Policy Design</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Compliance Frameworks</span>
+            <!-- Cloud & IaC -->
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Terraform</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AWS CDK</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AWS CloudFormation</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Automation & IaC</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Cloud Security & Governance</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Monitoring & Logging</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AI-Enhanced Security</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Amazon Bedrock</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Python</span>
+            <!-- Networking -->
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">AWS Network Security Architecture</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Network Security</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">OSPF / BGP / NAT</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">Cisco / Aruba / Juniper</span>
+            <span style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:6px 14px; border-radius:20px; font-size:0.82rem; color:#4f46e5;">VMware ESXi / vSphere</span>
+        </section>
+        <!-- Education (Left) | Timeline | Experience (Right) -->
+        <section id="experience" class="timeline-section fade-in">
+            <h2>Education & Experience</h2>
+            <div style="display:grid; grid-template-columns:1fr 3px 1fr; margin-bottom:0;">
+                <span style="text-align:center; font-size:1rem; font-weight:600; color:#6366f1; text-transform:uppercase; letter-spacing:1px; padding:10px 0;">Education</span>
+                <span style="background:linear-gradient(to bottom,#6366f1,#8b5cf6);"></span>
+                <span style="text-align:center; font-size:1rem; font-weight:600; color:#6366f1; text-transform:uppercase; letter-spacing:1px; padding:10px 0;">Experience</span>
+            </div>
+
+            <!-- Row 1: SANS ACS concurrent with Blink -->
+            <div class="tl-row">
+                <div class="tl-left">
+                    <div class="tl-card education">
+                        <div class="date">Jan 2026 – Present</div>
+                        <h3><a href="https://www.sans.edu/cyber-security-programs/undergraduate-certificate" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none; border-bottom:1px dashed #8b5cf6;">Applied Cybersecurity Certificate (ACS)</a></h3>
+                        <div class="company">SANS Institute of Technology, US</div>
+                    </div>
+                </div>
+                <div class="tl-mid"></div>
+                <div class="tl-right">
+                    <div class="tl-card experience">
+                        <div class="date">May 2025 – Present</div>
+                        <h3>Network & IT Engineer II (L5)</h3>
+                        <div class="company">Blink – North Reading, MA, USA</div>
+                        <details>
+                            <summary>View Details</summary>
+                            <ul>
+                                <li>Implementing and securing enterprise routing protocols (OSPF, BGP, NAT) across multi-vendor network infrastructure (Cisco, Aruba, Juniper) with Layer 2/3 security controls</li>
+                                <li>Managing VMware infrastructure security (ESXi nodes, vSphere clusters) ensuring high availability, failover configurations, and hardened virtualization environments</li>
+                                <li>Deploying redundant DHCP/DNS/NTP infrastructure with failover for all lab network devices, eliminating single points of failure</li>
+                                <li>Leading network infrastructure modernization — decommissioning physical servers and migrating workloads to AWS cloud with security-first architecture</li>
+                                <li>Configuring wireless security policies including SSID segmentation for isolated test environments across multiple teams</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: WGU Masters concurrent with Amazon -->
+            <div class="tl-row">
+                <div class="tl-left">
+                    <div class="tl-card education">
+                        <div class="date">May 2024 – September 2025</div>
+                        <h3><a href="https://www.wgu.edu/online-it-degrees/cybersecurity-information-assurance-masters-program.html" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none; border-bottom:1px dashed #8b5cf6;">Masters in Cybersecurity & Information Assurance</a></h3>
+                        <div class="company">Western Governors University, US</div>
+                    </div>
+                </div>
+                <div class="tl-mid"></div>
+                <div class="tl-right">
+                    <div class="tl-card experience">
+                        <div class="date">Aug 2020 – May 2025</div>
+                        <h3>IT Support Engineer II (L5)</h3>
+                        <div class="company">Amazon – New England, USA</div>
+                        <details>
+                            <summary>View Details</summary>
+                            <ul>
+                                <li>Lead infrastructure security engineer for multiple regional teams, supporting Amazon Delivery Stations and Fulfillment Centers with 99.9% SLA compliance</li>
+                                <li>Spearheaded IT infrastructure migrations and security upgrades across multi-site environments, evaluating and implementing hardened solutions</li>
+                                <li>Developed processes for service reliability, recoverability, and incident response across 24/7 operations with rotating on-call schedule</li>
+                                <li>Built and secured IT infrastructure for AMZL and Robotic Delivery Stations from ground up, including network segmentation and access controls</li>
+                                <li>Led hiring initiatives and created technical training programs, maintaining comprehensive security documentation and runbooks</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: 4A's -->
+            <div class="tl-row">
+                <div class="tl-left"></div>
+                <div class="tl-mid"></div>
+                <div class="tl-right">
+                    <div class="tl-card experience">
+                        <div class="date">Jun 2019 – Aug 2020</div>
+                        <h3>System Administrator</h3>
+                        <div class="company">4A's – New York City, USA</div>
+                        <details>
+                            <summary>View Details</summary>
+                            <ul>
+                                <li>Designed and secured virtualized environment using ESXi/vCenter with VLAN segmentation, achieving 40% improvement in resource utilization and 99.9% uptime</li>
+                                <li>Deployed SonicWall firewalls for network perimeter security and site-to-site VPN access management</li>
+                                <li>Led Windows Server migration from 2003/2008R2 to 2016, modernizing and hardening legacy systems for 200+ users</li>
+                                <li>Migrated on-premises systems to Azure and G-Suite with security controls, reducing infrastructure costs by 35%</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="badges-section fade-in">
+            <h2>Certifications</h2>
+            <p style="text-align:center; color:#64748b; font-size:0.9rem; margin-top:-30px; margin-bottom:30px;"><a href="https://www.credly.com/users/nouraroussi/badges" target="_blank" rel="noopener noreferrer" style="color:#4f46e5; text-decoration:none;">Verify on Credly →</a></p>
+            <div class="badges-grid" style="grid-template-columns: repeat(5, 1fr); max-width: 700px; margin: 0 auto;">
+                <!-- Featured / Advanced Certifications - single row -->
+                <a href="https://www.credly.com/badges/2ab67e07-79bb-4320-ba1d-ee1a98d4b901" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/de7e10b8-25a9-420b-834c-1e9cffd3b2fa/image.png" alt="CISSP"><span>CISSP</span></a>
+                <a href="https://www.credly.com/badges/64bdc6e8-0694-4852-8732-6fc89edf029a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/8e6bde54-8a33-4ec0-9d70-90fcde581bcf/image.png" alt="GSEC"><span>GSEC</span></a>
+                <a href="https://www.credly.com/badges/3edcb458-e2a2-455f-8bbc-4939c5875d17" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png" alt="AWS Security Specialty"><span>AWS Security Specialty</span></a>
+                <a href="https://www.credly.com/badges/f48ce6d5-9eba-4573-9ba9-f19247e113f8" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/5343b652-c9a0-418e-bfaf-7ed5a2ddd0c4/blob" alt="SecurityX"><span>SecurityX</span></a>
+                <a href="https://www.credly.com/badges/6bf64932-3da4-453e-b1bc-be5297794f4a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png" alt="CCNA"><span>CCNA</span></a>
+            </div>
+            <!-- Show More -->
+            <div style="text-align:center; margin-top:20px;">
+                <button id="showMoreCerts" onclick="document.getElementById('moreCerts').style.display='grid';this.style.display='none';" style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); padding:8px 20px; border-radius:20px; font-size:0.85rem; color:#4f46e5; cursor:pointer; transition:background 0.2s;">Show All Certifications ↓</button>
+            </div>
+            <div id="moreCerts" class="badges-grid" style="display:none; margin-top:20px;">
+                <a href="https://www.credly.com/badges/2ab67e07-79bb-4320-ba1d-ee1a98d4b901" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/de7e10b8-25a9-420b-834c-1e9cffd3b2fa/image.png" alt="CISSP"><span>CISSP</span></a>
+                <a href="https://www.credly.com/badges/a2364193-22e1-483c-8d34-6a942282a8c0" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/2030e43f-8003-4d4b-9630-847add403c87/image.png" alt="CC"><span>Certified in Cybersecurity (CC)</span></a>
+                <a href="https://www.credly.com/badges/64bdc6e8-0694-4852-8732-6fc89edf029a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/8e6bde54-8a33-4ec0-9d70-90fcde581bcf/image.png" alt="GSEC"><span>GSEC</span></a>
+                <a href="https://www.credly.com/badges/773fa553-b58e-408a-98b4-d7cbb6a6048a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/2d9b3293-9295-4ac3-a326-1bb7013225a4/image.png" alt="GFACT"><span>GFACT</span></a>
+                <a href="https://www.credly.com/badges/3edcb458-e2a2-455f-8bbc-4939c5875d17" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png" alt="AWS Security Specialty"><span>AWS Security Specialty</span></a>
+                <a href="https://www.credly.com/badges/007efa5c-f9cb-41e0-993b-c60ba32f5fd4" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Solutions Architect"><span>AWS Solutions Architect</span></a>
+                <a href="https://www.credly.com/badges/502b8e88-7171-4e1e-b6ce-60e3e1ed0295" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Developer"><span>AWS Developer</span></a>
+                <a href="https://www.credly.com/badges/3c8cc46b-2e7d-4d5d-a7f1-113761b042f2" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/88a6405e-0f26-442a-95ed-f9b9db4c857e/blob" alt="AWS CloudOps"><span>AWS CloudOps</span></a>
+                <a href="https://www.credly.com/badges/9e3369a9-48a0-457c-9320-8a907f70aeb1" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS AI Practitioner"><span>AWS AI Practitioner</span></a>
+                <a href="https://www.credly.com/badges/2b6d2680-5c80-4bc3-b09a-6deebac5937b" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Cloud Practitioner"><span>AWS Cloud Practitioner</span></a>
+                <a href="https://www.credly.com/badges/9f825acd-ff79-48f5-a476-c4b0feb6d997" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/ea344df5-1074-410e-b359-ded4ea3574a7/linkedin_thumb_blob" alt="Cloud Quest: Security"><span>Cloud Quest: Security</span></a>
+                <a href="https://www.credly.com/badges/e96555dd-658c-4b58-acc5-6d4f2685d42a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/6bf3f80e-4cba-4b4c-bf45-85aec42233ff/linkedin_thumb_blob" alt="Cloud Quest: Networking"><span>Cloud Quest: Networking</span></a>
+                <a href="https://www.credly.com/badges/dc13a382-0332-4aec-96e3-cacbf895aa14" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/320bfb8f-e722-41b9-a70a-c3fb07402981/linkedin_thumb_blob" alt="Cloud Quest: Solutions Architect"><span>Cloud Quest: Solutions Architect</span></a>
+                <a href="https://www.credly.com/badges/4b534260-7275-4e75-b497-4ba4ced927cd" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/e3f85edd-57d4-4585-9311-7b99b3bc7a75/linkedin_thumb_blob" alt="Cloud Quest: Gen AI Architect"><span>Cloud Quest: Gen AI Architect</span></a>
+                <a href="https://www.credly.com/badges/d1a9a6e0-db31-4bde-8b87-0fd6f4f0b76d" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/aed5aea8-8054-431f-aa1c-6b33b256d2ca/linkedin_thumb_blob" alt="Industry Quest: Healthcare"><span>Industry Quest: Healthcare</span></a>
+                <a href="https://www.credly.com/badges/b29bd03a-6a26-42d8-b763-9b9b533a352b" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/b870667f-00a3-48d7-b988-9c02b441b883/image.png" alt="Well-Architected Proficient"><span>Well-Architected Proficient</span></a>
+                <a href="https://www.credly.com/badges/f48ce6d5-9eba-4573-9ba9-f19247e113f8" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/5343b652-c9a0-418e-bfaf-7ed5a2ddd0c4/blob" alt="SecurityX"><span>SecurityX</span></a>
+                <a href="https://www.credly.com/badges/b7c79cc3-beed-4041-80b9-31cd54c95114" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/c7ac176b-15a3-4726-827a-e8cee8fe44dc/blob" alt="PenTest+"><span>PenTest+</span></a>
+                <a href="https://www.credly.com/badges/b72791fd-eedc-44d3-9cf6-1d706c1a1785" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CySA+"><span>CySA+</span></a>
+                <a href="https://www.credly.com/badges/34e1fe77-fc8a-4462-a0c2-03ba4fa8822c" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/7c798dfc-1610-42c6-8729-2b735f88fab0/blob" alt="SecAI+"><span>SecAI+</span></a>
+                <a href="https://www.credly.com/badges/943a6ca8-7773-4d2e-a6d4-6d37157bf78e" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob" alt="Security+"><span>Security+</span></a>
+                <a href="https://www.credly.com/badges/19c4b78c-7950-4d43-9d0f-d84c5113aa14" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/b2e3c623-cc4a-4f0c-8a3b-aa6231e138fe/blob" alt="Cloud+"><span>Cloud+</span></a>
+                <a href="https://www.credly.com/badges/3659c7e8-d337-4be8-a06e-4899638ebf43" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/c8ba8fa6-ab8b-4df7-879f-4ae7b98b2765/blob" alt="Linux+"><span>Linux+</span></a>
+                <a href="https://www.credly.com/badges/261de691-5759-4854-80e7-6e630617c1af" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/c70ba73e-3c8a-46fa-9d60-4a9af94ad662/blob" alt="Network+"><span>Network+</span></a>
+                <a href="https://www.credly.com/badges/55b7f064-d5a7-45ef-9904-59c3cfd9dada" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/07378420-4407-4f09-a4d7-9301d87dec34/blob" alt="Server+"><span>Server+</span></a>
+                <a href="https://www.credly.com/badges/e9914f41-0890-4474-8598-0064f5c0a29a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob" alt="A+"><span>A+</span></a>
+                <a href="https://www.credly.com/badges/7ab33c5a-4b69-4f6b-9759-e08f632ed28b" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/4e8cb067-ff0a-4b3e-bf5d-7290ba25d0d6/CompTIA_CSIE.png" alt="CSIE"><span>CSIE</span></a>
+                <a href="https://www.credly.com/badges/0bbd1378-de8a-417b-8596-1dec4c39a48d" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/93d16d4a-223f-41bd-aaad-6a491b7b1fa8/CompTIA_CSAE.png" alt="CSAE"><span>CSAE</span></a>
+                <a href="https://www.credly.com/badges/1b7c5ee2-9349-4214-9751-095f9ab8eb15" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/ba1b8072-8ebe-432c-88e5-05bc809c624a/CompTIA_CSAP.png" alt="CSAP"><span>CSAP</span></a>
+                <a href="https://www.credly.com/badges/ab52b345-d0d7-47f5-832b-ff7afec79558" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/6f68e302-2193-4cbc-b2d9-50541a130ffa/CompTIA_CNSP.png" alt="CNSP"><span>CNSP</span></a>
+                <a href="https://www.credly.com/badges/75f39d12-cad7-4cd3-96b5-c76f74b17a4a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/3eaf80a9-a69a-480a-a98b-e9a91796d6cb/CompTIA_CNVP.png" alt="CNVP"><span>CNVP</span></a>
+                <a href="https://www.credly.com/badges/f10411f4-b0ed-480f-8694-cce6bd4cb7c4" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/9f54bf46-dc18-408c-a74e-2637facd1856/CompTIA_CSCP.png" alt="CSCP"><span>CSCP</span></a>
+                <a href="https://www.credly.com/badges/f5bebfd9-9b02-48f9-8f80-defac573e34e" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/18218ce6-e7d4-4479-9500-b7499645b763/CompTIA_CCAP.png" alt="CCAP"><span>CCAP</span></a>
+                <a href="https://www.credly.com/badges/c3474011-d190-49c9-8b6c-7a3462c42efa" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/d68e17f2-b591-4f2e-ae64-414ba82665f4/CompTIA_CLNP.png" alt="CLNP"><span>CLNP</span></a>
+                <a href="https://www.credly.com/badges/b6009d22-43e1-440f-8e50-d00a6aeb55e6" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/f308a5b0-18e3-4e93-ae15-9f27dd0a94cc/CompTIA_CNIP.png" alt="CNIP"><span>CNIP</span></a>
+                <a href="https://www.credly.com/badges/8e36d505-ca18-4e6d-a2eb-60233789c76a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/8090280a-311f-425f-a1cd-a32770b5a444/CompTIA_CSIS.png" alt="CSIS"><span>CSIS</span></a>
+                <a href="https://www.credly.com/badges/bf4626a5-2aec-4798-b69d-ed61b29aeebf" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/7f7657b9-4d1b-4b8d-b5ee-5fdf6d7ccd71/04294_CompTIA_Cert_Badges_Specialist_-_CIOS.png" alt="CIOS"><span>CIOS</span></a>
+                <a href="https://www.credly.com/badges/55cfd03c-227d-47e9-9432-1c5faa1dad45" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/802502c7-7b2c-4a96-82b0-e6aa5796e878/CompTIA_CSSS.png" alt="CSSS"><span>CSSS</span></a>
+                <a href="https://www.credly.com/badges/6bf64932-3da4-453e-b1bc-be5297794f4a" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png" alt="CCNA"><span>CCNA</span></a>
+                <a href="https://www.credly.com/badges/1d7becc4-644b-488a-b467-59619457d270" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/1442feda-7455-4bcb-a114-8803c9dee675/CV_PNG_L200.png" alt="Cisco Network Devices"><span>Cisco Network Devices</span></a>
+                <a href="https://www.credly.com/badges/7e4c9d63-a4de-4ec6-81c7-45adea3ddde8" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/22a0ece5-ff05-4594-8320-25e55e9ae203/image.png" alt="Fortinet FCF"><span>Fortinet FCF</span></a>
+                <a href="https://www.credly.com/badges/722bae21-f48e-4b62-88aa-23fc8a093208" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/4e248e82-9e87-4a63-9263-250fafe5fb1f/image.png" alt="PCAP Python"><span>PCAP Python</span></a>
+                <a href="https://www.credly.com/badges/37386789-593c-479d-9640-19b8314daed7" target="_blank" rel="noopener noreferrer" class="badge-card"><img src="https://images.credly.com/size/340x340/images/c4569922-64bd-4bb9-9eda-a37736389d26/image.png" alt="Verified Academic Qualifications"><span>Verified Academic Qualifications</span></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Email obfuscation - prevents spam scraping
+        (function(){var u='arnourssi',d='gmail.com',e=u+'@'+d,a=document.getElementById('eml');a.textContent=e;a.href='mailto:'+e;})();
+
+        const badgeIcons = [
+            "https://images.credly.com/size/340x340/images/de7e10b8-25a9-420b-834c-1e9cffd3b2fa/image.png",
+            "https://images.credly.com/size/340x340/images/8e6bde54-8a33-4ec0-9d70-90fcde581bcf/image.png",
+            "https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png",
+            "https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png",
+            "https://images.credly.com/size/340x340/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
+            "https://images.credly.com/size/340x340/images/5343b652-c9a0-418e-bfaf-7ed5a2ddd0c4/blob",
+            "https://images.credly.com/size/340x340/images/c7ac176b-15a3-4726-827a-e8cee8fe44dc/blob",
+            "https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
+            "https://images.credly.com/size/340x340/images/4e248e82-9e87-4a63-9263-250fafe5fb1f/image.png",
+            "https://images.credly.com/size/340x340/images/88a6405e-0f26-442a-95ed-f9b9db4c857e/blob"
+        ];
+        const bg = document.getElementById('floatingBg');
+        for (let i = 0; i < 15; i++) {
+            const img = document.createElement('img');
+            img.src = badgeIcons[i % badgeIcons.length];
+            img.className = 'floating-badge';
+            img.style.left = Math.random() * 100 + '%';
+            img.style.top = Math.random() * 100 + '%';
+            img.style.animationDuration = (15 + Math.random() * 20) + 's';
+            img.style.animationDelay = (-Math.random() * 20) + 's';
+            img.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+            bg.appendChild(img);
+        }
+
+        // Scroll animation - fade in elements as they appear
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Badge tooltips - use alt text as tooltip
+        document.querySelectorAll('.badge-card').forEach(card => {
+            const img = card.querySelector('img');
+            if (img && img.alt) card.setAttribute('data-tooltip', img.alt);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.sticky-nav a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding:30px 20px; border-top:1px solid rgba(99,102,241,0.1); margin-top:40px;">
+        <p style="font-size:0.8rem; color:#94a3b8;">Last updated June 2026 · Built with HTML/CSS/JS · Deployed on AWS</p>
+        <p style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">© 2026 Nour Aroussi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

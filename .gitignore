@@ -1,0 +1,29 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+!terraform.tfvars.example
+
+# CDK
+cdk.out/
+.venv/
+__pycache__/
+*.egg-info/
+
+# Python
+*.pyc
+.env
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Lambda zip artifacts
+*.zip

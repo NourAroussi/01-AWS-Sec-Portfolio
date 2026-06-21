@@ -1,0 +1,18 @@
+# CDK
+cdk/node_modules/
+cdk/.venv/
+cdk/cdk.out/
+*.js
+!site/**/*.js
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate*
+terraform/lambda/counter.zip
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
