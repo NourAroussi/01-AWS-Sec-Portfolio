@@ -221,5 +221,5 @@ project-name/
 
 ## Author
 
-**Your Name** — Cloud Security Engineer  
-[LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/your-username)
+**Nour Aroussi** — Cloud Security Engineer  
+[LinkedIn](https://linkedin.com/in/NourAroussi) | [GitHub](https://github.com/NourAroussi)
